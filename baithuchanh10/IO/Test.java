@@ -1,4 +1,4 @@
-package baithuchanh10;
+package baithuchanh10.IO;
 
 //import java.io.BufferedInputStream;
 import java.io.File;
