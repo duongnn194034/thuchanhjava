@@ -2,16 +2,17 @@ package baithuchanh3;
 
 public class Person {
     private static int idCount = 1;
-    private int id;
+    private final int id;
     private String name;
-    private int yearOfBirth = -1;
+    private final int yearOfBirth;
     enum Gender {
         Male,
         Female 
     }
     private Gender gender;
-    public Person () {
+    public Person (int year) {
         this.id = idCount;
+        this.yearOfBirth = year;
         idCount++;
     } 
 
@@ -26,11 +27,6 @@ public class Person {
     }
     public int getYearOfBirth () {
         return yearOfBirth;
-    }
-    public void setYearOfBirth (int year) {
-        if (yearOfBirth < 0) {
-            this.yearOfBirth = year;
-        }
     }
     public Gender getGender () {
         return gender;
